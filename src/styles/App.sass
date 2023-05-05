@@ -1,5 +1,49 @@
-.App
+.todo
   display: flex
   flex-direction: column
   max-width: 400px
   margin: auto
+  padding: 16px
+  background: #FFFFFF
+
+.todo-input
+  width: 100%
+  padding-bottom: 16px
+  display: flex
+  position: relative
+  z-index: 2
+  
+  input
+    outline: 0
+    border: 1px solid #E6E4F0
+    border-start-start-radius: 10px
+    border-end-start-radius: 10px
+    font-weight: 600
+    font-size: 14px
+    line-height: 18px
+    color: #4F4F4F
+    padding: 10px
+    width: 85%
+    box-shadow: 0px 4px 8px rgba(6, 3, 21, 0.08)
+
+    &::placeholder
+      opacity: 0.75
+  
+  button
+    width: 15%
+    border: 0
+    background: $button-bg
+    border-start-end-radius: 10px
+    border-end-end-radius: 10px
+    font-size: 20px
+    color: #15276e
+    font-weight: bold
+    box-shadow: 0px 4px 8px rgba(6, 3, 21, 0.08)
+
+.todo-items
+  display: flex
+  flex-direction: column
+  @extend .transition-05-all
+  position: relative
+  z-index: 1
+  overflow: hidden
